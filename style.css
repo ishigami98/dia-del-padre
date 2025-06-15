@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/imagenes/fondo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Bangers', cursive;
+    color: white;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-top: 20px;
+    font-size: 3.2em;
+    text-shadow: 4px 4px 0 #000, 6px 6px 0 #ff0066;
+    color: #ffe600;
+    letter-spacing: 2px;
+  }
+  
+  .foto-container {
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .foto {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  }
+  
+  p {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    max-width: 90%;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0 #000, 6px 6px 0 #00ccff;
+    color: #ffea00;
+  }
+  
+  audio {
+    display: none;
+  }
+  
+  .flotante {
+    position: absolute;
+    width: 100px;
+    animation: flotar 10s infinite ease-in-out;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  
+  @keyframes flotar {
+    0% {transform: translateY(0px) rotate(0deg);}
+    50% {transform: translateY(-15px) rotate(5deg);}
+    100% {transform: translateY(0px) rotate(0deg);}
+  }
+  
+  .moto1 { top: 10%; left: 5%; }
+  .moto2 { top: 15%; right: 5%; }
+  .moto3 { bottom: 15%; left: 10%; }
+  .moto4 { bottom: 10%; right: 8%; }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2em;
+    }
+  
+    p {
+      font-size: 1.3em;
+    }
+  
+    .flotante {
+      width: 70px;
+    }
+  
+    .foto-container {
+      max-width: 90%;
+    }
+  }
+  

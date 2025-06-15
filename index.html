@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz día Papá</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>¡Feliz Día del Padre!</h1>
+
+  <div class="foto-container">
+    <img src="/imagenes/centro.jpg" class="foto" alt="Papá e hijo">
+  </div>
+
+  <img src="/imagenes/moto1.png" class="flotante moto1" alt="Moto 1">
+  <img src="/imagenes/moto2.png" class="flotante moto2" alt="Moto 2">
+  <img src="/imagenes/moto3.png" class="flotante moto3" alt="Moto 3">
+  <img src="/imagenes/moto4.webp" class="flotante moto4" alt="Moto 4">
+
+  <p>Gracias por ser mi padre, te quiero mucho.</p>
+
+  <audio id="musica" autoplay loop>
+    <source src="/musica/miqueridoviejo.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    // Intenta reproducir al cargar (algunos navegadores lo bloquean sin interacción)
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('musica');
+      audio.play().catch(() => {
+        // En móviles puede fallar por seguridad, muestra un botón si eso pasa
+        const btn = document.createElement('button');
+        btn.textContent = "▶ Reproducir música";
+        btn.style = "position: fixed; bottom: 10px; left: 10px; z-index: 999; padding: 10px; font-size: 16px;";
+        btn.onclick = () => { audio.play(); btn.remove(); };
+        document.body.appendChild(btn);
+      });
+    });
+  </script>
+</body>
+</html>
